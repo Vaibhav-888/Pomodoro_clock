@@ -12,17 +12,22 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
 timer = None
+
 # ---------------------------- TIMER RESET ------------------------------- #
 
 def reset_timer():
+    """Resets the timer and UI."""
     window.after_cancel(timer)
     title_label.config(text="Timer")
     canvas.itemconfig(timer_text, text="00:00")
     check_marks.config(text="")
     global reps
     reps = 0
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
+
+# ---------------------------- TIMER MECHANISM ------------------------------- #
+
 def start_timer():
+    """Starts the timer based on work, short break, and long break intervals."""
     global reps
     reps += 1
 
@@ -42,7 +47,9 @@ def start_timer():
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+
 def count_down(count):
+    """Counts down the timer."""
     global timer
     count_min = math.floor(count / 60)
     count_sec = count % 60
@@ -62,6 +69,7 @@ def count_down(count):
 
 
 # ---------------------------- UI SETUP ------------------------------- #
+
 window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
@@ -84,3 +92,4 @@ check_marks = Label(fg=GREEN, bg=YELLOW, highlightthickness=0)
 check_marks.grid(column=1, row=3)
 
 window.mainloop()
+
