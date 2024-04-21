@@ -36,10 +36,3 @@ This is a simple Pomodoro clock application built using Python's Tkinter library
 
 Contributions are welcome! If you have any ideas for improvements or new features, feel free to submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this template according to your project's specific details and needs. Let me know if you need further assistance!
